@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd /opt/myhubot
+/opt/myhubot/bin/hubot -a slack -n hubot
