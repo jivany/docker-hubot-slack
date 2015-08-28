@@ -1,7 +1,7 @@
 FROM phusion/baseimage
 MAINTAINER Jacob Sanford <jsanford_at_unb.ca>
 
-ENV HUBOT_VERSION=2.6.0
+ENV HUBOT_VERSION=2.16.0
 
 RUN apt-get update && \
   apt-get install -y wget && \
