@@ -4,9 +4,9 @@ MAINTAINER Jacob Sanford <jsanford_at_unb.ca>
 ENV HUBOT_NAME Hubot
 ENV HUBOT_PATH /opt/$HUBOT_NAME
 ENV HUBOT_USER yeoman
-ENV HUBOT_OWNER="Bot Wrangler <bw@example.com>"
-ENV HUBOT_DESCRIPTION="Delightfully aware robutt"
-ENV HUBOT_SCRIPTS="'redis-brain.coffee', 'shipit.coffee', 'replygif.coffee'"
+ENV HUBOT_OWNER='Bot Wrangler <bw@example.com>'
+ENV HUBOT_DESCRIPTION='Delightfully aware robutt'
+ENV HUBOT_SCRIPTS='"redis-brain.coffee", "shipit.coffee", "replygif.coffee"'
 
 # Install yeoman and required dependencies
 RUN apt-get update && \
