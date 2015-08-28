@@ -10,9 +10,9 @@ ENV HUBOT_SCRIPTS="'redis-brain.coffee', 'shipit.coffee', 'replygif.coffee'"
 
 # Install yeoman and required dependencies
 RUN apt-get update && \
-  apt-get install -y wget && \
+  DEBIAN_FRONTEND="noninteractive" apt-get install -y wget && \
   wget -q -O - https://deb.nodesource.com/setup | sudo bash - && \
-  apt-get install -y git build-essential nodejs python && \
+  DEBIAN_FRONTEND="noninteractive" apt-get install -y git build-essential nodejs python && \
   npm install -g coffee-script yo generator-hubot
 
 # Add the HUBOT_USER user
