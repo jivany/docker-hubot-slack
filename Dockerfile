@@ -6,7 +6,6 @@ ENV HUBOT_PATH /opt/$HUBOT_NAME
 ENV HUBOT_USER yeoman
 ENV HUBOT_OWNER='Bot Wrangler <bw@example.com>'
 ENV HUBOT_DESCRIPTION='Delightfully aware robutt'
-ENV HUBOT_SCRIPTS='["redis-brain.coffee", "shipit.coffee", "replygif.coffee"]'
 
 # Install yeoman and required dependencies
 RUN apt-get update && \
@@ -26,8 +25,17 @@ RUN mkdir -p ${HUBOT_PATH} && \
 # Use HUBOT_USER to provision hubot
 USER ${HUBOT_USER}
 RUN cd ${HUBOT_PATH} && \
-  yo hubot --owner="${HUBOT_OWNER}" --name="${HUBOT_USER}" --description="${HUBOT_DESCRIPTION}" --adapter=slack  && \
-  echo ${HUBOT_SCRIPTS} > hubot-scripts.json
+  yo hubot --owner="${HUBOT_OWNER}" --name="${HUBOT_USER}" --description="${HUBOT_DESCRIPTION}" --adapter=slack
+
+ENV HUBOT_SCRIPTS='["redis-brain.coffee", "shipit.coffee", "replygif.coffee"]'
+ENV HUBOT_NPM_SCRIPTS='hubot-google-images'
+ENV HUBOT_EXTERNAL_SCRIPTS='["hubot-help", "hubot-google-images"]'
+
+# Install External NPM Scripts And Enable
+RUN cd ${HUBOT_PATH} && \
+  echo ${HUBOT_SCRIPTS} > hubot-scripts.json && \
+  npm install ${HUBOT_NPM_SCRIPTS} --save && \
+  echo ${HUBOT_EXTERNAL_SCRIPTS} > external-scripts.json
 
 # Add phusion/baseimage service
 USER root
