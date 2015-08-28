@@ -6,7 +6,7 @@ ENV HUBOT_PATH /opt/$HUBOT_NAME
 ENV HUBOT_USER yeoman
 ENV HUBOT_OWNER='Bot Wrangler <bw@example.com>'
 ENV HUBOT_DESCRIPTION='Delightfully aware robutt'
-ENV HUBOT_SCRIPTS='"redis-brain.coffee", "shipit.coffee", "replygif.coffee"'
+ENV HUBOT_SCRIPTS='["redis-brain.coffee", "shipit.coffee", "replygif.coffee"]'
 
 # Install yeoman and required dependencies
 RUN apt-get update && \
@@ -27,7 +27,7 @@ RUN mkdir -p ${HUBOT_PATH} && \
 USER ${HUBOT_USER}
 RUN cd ${HUBOT_PATH} && \
   yo hubot --owner="${HUBOT_OWNER}" --name="${HUBOT_USER}" --description="${HUBOT_DESCRIPTION}" --adapter=slack  && \
-  echo "[{$HUBOT_SCRIPTS}]" > hubot-scripts.json
+  echo ${HUBOT_SCRIPTS} > hubot-scripts.json
 
 # Add phusion/baseimage service
 USER root
