@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-cd /opt/myhubot
-/opt/myhubot/bin/hubot -a slack -n hubot
+exec /sbin/setuser ${HUBOT_USER} ${HUBOT_PATH}/bin/hubot -a slack -n ${HUBOT_NAME}
