@@ -15,7 +15,7 @@ RUN apt-get update && \
   apt-get install -y git build-essential nodejs python && \
   npm install -g coffee-script yo generator-hubot
 
-# Add a yeoman user
+# Add the HUBOT_USER user
 RUN adduser --disabled-password --gecos "" ${HUBOT_USER} && \
   echo "${HUBOT_USER} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
@@ -23,8 +23,8 @@ RUN adduser --disabled-password --gecos "" ${HUBOT_USER} && \
 RUN mkdir -p ${HUBOT_PATH} && \
   chown ${HUBOT_USER} ${HUBOT_PATH}
 
-# Use yeoman to provision hubot
-USER yeoman
+# Use HUBOT_USER to provision hubot
+USER ${HUBOT_USER}
 RUN cd ${HUBOT_PATH} && \
   yo hubot --owner="${HUBOT_OWNER}" --name="${HUBOT_USER}" --description="${HUBOT_DESCRIPTION}" --adapter=slack  && \
   echo "[{$HUBOT_SCRIPTS}]" > hubot-scripts.json
