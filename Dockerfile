@@ -1,7 +1,6 @@
 FROM phusion/baseimage
 MAINTAINER Jacob Sanford <jsanford_at_unb.ca>
 
-ENV HUBOT_VERSION 2.16.0
 ENV HUBOT_NAME Hubot
 ENV HUBOT_PATH /opt/$HUBOT_NAME
 ENV HUBOT_USER yeoman
