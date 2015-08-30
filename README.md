@@ -13,7 +13,7 @@ docker run --rm \
 ## Runtime/Environment Variables
 * `HUBOT_GOOGLE_API_KEY` - (Optional) A Google Maps JavaScript API v3 key. This can be obtained through the [google developers console](http://stackoverflow.com/questions/22294128/how-can-i-get-google-map-api-v3-key).
 * `HUBOT_SLACK_TOKEN` - (Required) The token issued from the Slack bot user page](https://api.slack.com/bot-users).
-* `REDIS_URL` - (Required) A redis url in fhe form redis://*PASSWORD*@*HOST*:*PORT*/*KEYPREFIX*.
+* `REDIS_URL` - (Optional) A redis url in fhe form redis://*PASSWORD*@*HOST*:*PORT*/*KEYPREFIX*.
 
 ## License
 - unblibraries/hubot-slack is licensed under the MIT License:
