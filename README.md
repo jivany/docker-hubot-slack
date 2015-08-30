@@ -1,4 +1,4 @@
-# unblibraries/hubot-slack
+# jacobsanford/hubot-slack
 Docker container : leverages phusion/baseimage to deploy our hubot for slack.
 
 ## Usage
@@ -20,10 +20,10 @@ docker run --rm \
 * `HUBOT_GOOGLE_CSE_KEY` - (Optional) A 'server' API key for the CSE API, available through the [google developers console](https://console.developers.google.com/project/hubotlibsystems) . Without this, the images returned from the 'animate me' command will not be animated.
 
 ## License
-- unblibraries/hubot-slack is licensed under the MIT License:
+- jacobsanford/hubot-slack is licensed under the MIT License:
   - http://opensource.org/licenses/mit-license.html
 - Attribution is not required, but much appreciated:
-  - `Hubot for Slack Docker Container by UNB Libraries`
+  - `Hubot for Slack Docker Container by Jacob Sanford`
 
 ## Credit
 - Original work for this container was based on that of [Nathaniel Hoag](http://nathanielhoag.com/blog/2014/12/07/a-dockerized-slack-integrated-hubot/).
