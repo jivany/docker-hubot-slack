@@ -1,5 +1,5 @@
 # jacobsanford/hubot-slack
-Docker container : leverages phusion/baseimage to deploy our hubot for slack.
+Docker image : leverages phusion/baseimage to deploy our hubot for slack.
 
 ## Usage
 ```
@@ -23,7 +23,7 @@ docker run --rm \
 - jacobsanford/hubot-slack is licensed under the MIT License:
   - http://opensource.org/licenses/mit-license.html
 - Attribution is not required, but much appreciated:
-  - `Hubot for Slack Docker Container by Jacob Sanford`
+  - `Hubot for Slack Docker Image by Jacob Sanford`
 
 ## Credit
-- Original work for this container was based on that of [Nathaniel Hoag](http://nathanielhoag.com/blog/2014/12/07/a-dockerized-slack-integrated-hubot/).
+- Original work for this image was based on that of [Nathaniel Hoag](http://nathanielhoag.com/blog/2014/12/07/a-dockerized-slack-integrated-hubot/).
