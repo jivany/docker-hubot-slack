@@ -7,9 +7,8 @@ ENV HUBOT_USER postgres
 ENV HUBOT_OWNER='Bot Wrangler <bw@example.com>'
 ENV HUBOT_DESCRIPTION='Delightfully aware robutt'
 
-ENV HUBOT_SCRIPTS='["shipit.coffee", "replygif.coffee"]'
-ENV HUBOT_NPM_SCRIPTS='hubot-google-images'
-ENV HUBOT_EXTERNAL_SCRIPTS='["hubot-help", "hubot-google-images"]'
+ENV HUBOT_NPM_SCRIPTS='hubot-google-images hubot-reaction'
+ENV HUBOT_EXTERNAL_SCRIPTS='["hubot-help", "hubot-google-images", "hubot-shipit", "hubot-reaction"]'
 
 WORKDIR ${HUBOT_PATH}
 
@@ -24,7 +23,7 @@ USER postgres
 ENV HOME ${HUBOT_PATH}
 RUN yo hubot --owner="${HUBOT_OWNER}" --name="${HUBOT_USER}" --description="${HUBOT_DESCRIPTION}" --adapter=slack && \
   npm install hubot-slack --save && \
-  echo ${HUBOT_SCRIPTS} > hubot-scripts.json && \
+  rm hubot-scripts.json && \
   npm install ${HUBOT_NPM_SCRIPTS} --save && \
   echo ${HUBOT_EXTERNAL_SCRIPTS} > external-scripts.json && \
   rm -rf ~/.npm && \
