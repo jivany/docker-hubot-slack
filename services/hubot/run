@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-cd ${HUBOT_PATH}
-bin/hubot -a slack -n ${HUBOT_NAME}
