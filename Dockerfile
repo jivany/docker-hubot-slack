@@ -7,7 +7,7 @@ ENV HUBOT_USER postgres
 ENV HUBOT_OWNER='Bot Wrangler <bw@example.com>'
 ENV HUBOT_DESCRIPTION='Delightfully aware robutt'
 
-ENV HUBOT_SCRIPTS='["redis-brain.coffee", "shipit.coffee", "replygif.coffee"]'
+ENV HUBOT_SCRIPTS='["shipit.coffee", "replygif.coffee"]'
 ENV HUBOT_NPM_SCRIPTS='hubot-google-images'
 ENV HUBOT_EXTERNAL_SCRIPTS='["hubot-help", "hubot-google-images"]'
 
