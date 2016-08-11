@@ -1,4 +1,4 @@
-# jacobsanford/hubot-slack [![](https://badge.imagelayers.io/jacobsanford/hubot-slack:latest.svg)](https://imagelayers.io/?images=jacobsanford/hubot-slack:latest 'Get your own badge on imagelayers.io')
+# jacobsanford/hubot-slack [![](https://images.microbadger.com/badges/image/jacobsanford/hubot-slack:latest.svg)](http://microbadger.com/images/jacobsanford/hubot-slack:latest "Get your own image badge on microbadger.com")
 Deploy [hubot](https://hubot.github.com/) for slack.
 
 ## Usage
