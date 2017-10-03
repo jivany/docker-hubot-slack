@@ -2,8 +2,5 @@ name: Hubot
 description: Hubot for BeepBoop
 config:
   - name: HUBOT_SLACK_TOKEN
-  - name: HUBOT_OWNER
-  - name: HUBOT_NPM_SCRIPTS
-  - name: HUBOT_EXTERNAL_SCRIPTS
 
 

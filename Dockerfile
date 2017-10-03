@@ -3,8 +3,8 @@ MAINTAINER Jacob Sanford <jsanford_at_unb.ca>
 
 ARG HUBOT_OWNER="Bot Wrangler <bw@example.com>"
 ARG HUBOT_DESCRIPTION="Delightfully aware robutt"
-ARG HUBOT_NPM_SCRIPTS="hubot-google-images hubot-reaction"
-ARG HUBOT_EXTERNAL_SCRIPTS='["hubot-help", "hubot-google-images", "hubot-shipit", "hubot-reaction"]'
+ARG HUBOT_NPM_SCRIPTS="hubot-google-images hubot-ingress"
+ARG HUBOT_EXTERNAL_SCRIPTS='["hubot-help", "hubot-google-images", "hubot-shipit", "hubot-ingress"]'
 
 ENV HUBOT_NAME Hubot
 ENV HUBOT_PATH /app
