@@ -2,5 +2,6 @@ name: Hubot
 description: Hubot for BeepBoop
 config:
   - name: HUBOT_SLACK_TOKEN
+  - name: HUBOT_CYCLE_TZ_OFFSET
 
 
