@@ -2,7 +2,7 @@ name: Hubot
 description: Hubot for BeepBoop
 config:
   - name: HUBOT_SLACK_TOKEN
-  - name: HUBOT_CYCLE_TZ_OFFSET
+  - name: HUBOT_CYCLE_TZ_NAME
   - name: HUBOT_GOOGLE_CSE_ID
   - name: HUBOT_GOOGLE_CSE_KEY
 
